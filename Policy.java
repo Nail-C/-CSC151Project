@@ -38,34 +38,42 @@ public class Policy
    }
    
     ////Set methods //
+    //sets Policy number 
    public void setPnum(int num)
    {
       pnum = num;
    }
+   //sets Provider
    public void setProvider(String P)
    {
       provider = P;
    }
+   //sets First name
    public void setFname(String F)
    {
       Fname = F;
    }
-   public void set(String L)
+   //set Last name
+   public void setLname(String L)
    {
       Lname = L;
    }
-   public void set(int A)
+   //sets Age
+   public void setAge(int A)
    {
       age = A;
    }
+   //sets Smoking Status
    public void setStatus(String S)
    {
       Status = S;
    }
+   //sets Height
    public void setHeight(double H)
    {
       Height = H;
    }
+   //sets Weight
    public void setWeight(double W)
    {
       Weight = W;
@@ -73,42 +81,42 @@ public class Policy
 
    
    ////////Getter methods
-   
+   //gets Policy number
    public int getPnum()
    {
       return pnum;
    }
-   
+   //gets Provider
    public String getProvider()
    {
       return provider;
    }
-   
+   //get First Name
    public String getFname()
    {
       return Fname;
    }
-   
+   //get Last name
    public String getLname()
    {
       return Lname;
    }
-   
+   //get Age
    public int getAge()
    {
       return age;
    }
- 
+   //get Smoking status
    public String getStatus()
    {
       return Status;
    }
-   
+   //get Height
    public double getHeight()
    {
       return Height;
    }
-   
+   //get Weight
    public double getWeight()
    {
       return Weight;
@@ -140,17 +148,11 @@ public class Policy
       double endprice = BASE_FEE;
       
       if(getAge() > MAX_AGE)
-      {
          endprice += 75;
-      }
       if(getStatus().equals("smoker"))
-      {
          endprice += SMOKER_FEE;
-      }
       if(getBMI() > BMI_LIMIT)
-      {
          endprice += ((getBMI() - BMI_LIMIT) * 20); 
-      }
       
       return endprice;
       
