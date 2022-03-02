@@ -25,7 +25,7 @@ public class Project_Nail_Claros
       Status = keyboard.nextLine();
       System.out.print("Please enter the Policyholder's Height (in inches): ");//use height
       Height = keyboard.nextDouble();
-      System.out.print("Please enter the Policyholder’s Weight (in pounds): ");//user weight
+      System.out.print("Please enter the Policyholder's Weight (in pounds): ");//user weight
       Weight = keyboard.nextDouble();
       //calls the policy class, pol is the instance
       //and inputs user innput 

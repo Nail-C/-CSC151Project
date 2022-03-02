@@ -127,14 +127,13 @@ public class Policy
    public double getBMI()////GetBMI method calculates BMI from user input and returns it
    {
       final int BMICALC = 703; //this constant unit is used in calculating BMI
-      double BMI = (getWeight() * BMICALC) / (getHeight() * getHeight());
-      
+       
       /*
       Formula for BMI
       (Policyholder’s Weight * 703 ) / (Policyholder’s Height2 )
       */
       
-      return BMI; //returns BMI
+      return (Weight * BMICALC) / (Height * Height); //returns BMI
    }
    
    public double getPrice()//GetPrice() method calculates price from user input and returns it
@@ -147,9 +146,9 @@ public class Policy
       
       double endprice = BASE_FEE;
       
-      if(getAge() > MAX_AGE)
+      if(age > MAX_AGE)
          endprice += 75;
-      if(getStatus().equals("smoker"))
+      if(Status.equals("smoker"))
          endprice += SMOKER_FEE;
       if(getBMI() > BMI_LIMIT)
          endprice += ((getBMI() - BMI_LIMIT) * 20); 
