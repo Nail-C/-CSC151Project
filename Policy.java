@@ -164,7 +164,7 @@ public class Policy
                          "\nProvider Name: " + getProvider() +
                          "\nPolicyholder's First Name: " + getFname() +
                          "\nPolicyholder's Last Name: " + getLname() +
-                         "\nPolicyholder's Smoking Status: " + getStatus());
+                         "\nPolicyholder's Smoking Status (smoker/non-smoker): " + getStatus());
       System.out.printf("Policyholder's Height: %,.1f inches\n", getHeight());
       System.out.printf("Policyholder's Weight: %,.1f pounds\n", getWeight());
       System.out.printf("Policyholder's BMI: %,.2f\n", getBMI());
