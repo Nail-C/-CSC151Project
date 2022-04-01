@@ -37,9 +37,12 @@ public class Project_Nail_Claros
       Height = inputFile.nextDouble();
       //user weightfrom file
       Weight = inputFile.nextDouble();
+      
+      //calls the PolicyHolder class and inputs all info related to a policy holder
+      PolicyHolder holder = new PolicyHolder(PF, PL, age, Status, Height, Weight);
       //calls the policy class, pol is the instance
       //and inputs user input 
-      Policy pol = new Policy(pnum, PName, PF, PL, age, Status, Height, Weight);
+      Policy pol = new Policy(pnum, PName, holder);
       List.add(pol);// the pol instnace is then added to the ArrayList
       //displays all user inputs and calculations
       
@@ -60,12 +63,13 @@ public class Project_Nail_Claros
       ///displays all info from the txt file.
       for(int i = 0; i < List.size(); i++)
       {
-         List.get(i).display();
+         System.out.print(List.get(i));
       }
       
+      System.out.println("\nThere were " + List.get(0).getPM() + " Policy objects created.\n");
       
       //Smoker and nonsmoker count
-      System.out.println("\nThe number of policies with a smoker is: " + smokerC);//prints quantity of smokers
+      System.out.println("The number of policies with a smoker is: " + smokerC);//prints quantity of smokers
       System.out.println("The number of policies with a non-smoker is: " + nonsmoker);//prints quantity of non-smokers
 
       
